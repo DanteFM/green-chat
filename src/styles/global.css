@@ -1,0 +1,77 @@
+:root {
+  color-scheme: light dark;
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+  /* Токены темы. Если нужно подогнать под референс, править только здесь. */
+  --bg: #ffffff;
+  --bg-chat: #eef1f6;
+  --surface: #ffffff;
+  --surface-hover: #f3f5f9;
+  --surface-active: #e8edff;
+  --text: #141824;
+  --muted: #6b7385;
+  --border: #e3e7ef;
+  --accent: #3d6bff;
+  --accent-2: #7a4dff;
+  --accent-text: #ffffff;
+  --bubble-in: #ffffff;
+  --bubble-in-text: #141824;
+  --danger: #e5484d;
+  --ok: #2fb367;
+  --shadow: 0 1px 2px rgb(20 24 36 / 12%);
+  --radius: 18px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161a25;
+    --bg-chat: #0f121a;
+    --surface: #1d2230;
+    --surface-hover: #232a3b;
+    --surface-active: #26305a;
+    --text: #e8ebf3;
+    --muted: #8c95ab;
+    --border: #2a3144;
+    --bubble-in: #232a3b;
+    --bubble-in-text: #e8ebf3;
+    --shadow: 0 1px 2px rgb(0 0 0 / 35%);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.4;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
